@@ -2,20 +2,21 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { InlineSVGModule } from 'ng-inline-svg';
-import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { PdfViewerModule } from './pdf-viewer/pdf-viewer.module';
+import { SwiftyViewerComponent } from './swifty-viewer/swifty-viewer/swifty-viewer.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SwiftyViewerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PdfViewerModule,
     InlineSVGModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    PdfViewerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
