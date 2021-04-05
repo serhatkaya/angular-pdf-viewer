@@ -1,3 +1,68 @@
+.hoverElement {
+  background-color: lightblue;
+  padding: 6px 10px;
+  border-radius: 5px;
+  margin: 30%;
+  top: 150px;
+}
+
+/* ------------ ------------------ -------------- */
+
+/*------ Tooltip related styles start here -------- */
+
+[data-customTooltip] {
+  cursor: pointer;
+  position: relative;
+}
+
+[data-customTooltip]::after {
+  background-color: #fff;
+  font-weight: normal;
+  color: #222;
+  font-size: 14px;
+  padding: 8px 12px;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 6px;
+  position: absolute;
+  text-align: center;
+  bottom: 0px;
+  left: 50%;
+  content: attr(data-customTooltip);
+  transform: translate(-50%, 110%) scale(0);
+  transform-origin: top;
+  transition: 0.14s;
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+[data-customTooltip]:hover:after {
+  display: block;
+  transform: translate(-50%, 110%) scale(1);
+  opacity: 1 !important;
+}
+
+/* ----- Other implementations demo-----  */
+
+.icons-container {
+  margin-top: 300px;
+}
+
+.icons-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #222;
+  border-radius: 6px;
+}
+
+.icons-wrapper>i.fas {
+  font-size: 30px;
+  color: #f6f6f6;
+  padding: 15px;
+}
+
 .toolbar {
   background: #303030;
   padding: 10px;
@@ -6,6 +71,8 @@
   right: 0;
   top: 0;
   z-index: 9999;
+  display: flex;
+  border: 0 solid #e0e0e0;
 
   span {
     color: white;
@@ -16,13 +83,9 @@
   margin: 0 7px;
   cursor: pointer;
 
-  &:hover {
-    opacity: 0.5;
-  }
+  &:hover {}
 
-  &.active {
-    opacity: 0.5;
-  }
+  &.active {}
 
   &.active:hover {
     opacity: 1;
@@ -90,10 +153,6 @@ pdf-viewer {
   height: 97vh;
 }
 
-:host ::ng-deep .pdfViewer {
-  margin-top: 2rem;
-}
-
 .page-buttons {
   z-index: 999;
   position: fixed;
@@ -107,7 +166,20 @@ pdf-viewer {
   border-radius: 50%;
   font-size: 16px;
   padding: 10px;
+  font-weight: 400;
   display: inline-block;
+  text-align: center;
+  vertical-align: middle;
   margin: 4px 2px;
-  color: black;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #343a40;
+  border-color: #343a40;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.page-increment:hover {
+  color: #fff;
+  background-color: #23272b;
+  border-color: #1d2124;
 }

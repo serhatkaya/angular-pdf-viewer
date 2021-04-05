@@ -11,7 +11,7 @@ export interface SwiftyConfig {
     fitToPage?: boolean;
     externalLinkTarget?: string;
     showBorders?: boolean;
-    src: string | Uint8Array | PDFSource;
+    src: string | ArrayBuffer | PDFSource;
     isOutlineShown?: boolean;
     fileName: string;
 }

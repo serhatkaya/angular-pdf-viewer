@@ -1,18 +1,18 @@
-<div class="toolbar d-flex">
+<div class="toolbar">
   <!-- <span class="my-icon" [ngClass]="{ active: isOutlineShown }" [inlineSVG]="'/assets/icon/baseline-toc-24px.svg'"
       (click)="toggleOutline()" title="Toggle Outline"></span> -->
 
   <span class="my-icon" [inlineSVG]="'/assets/icon/baseline-open_in_browser-24px.svg'"
-    (click)="downloadPDF(arrayBufferToBase64(this.config.src))" title="Download"></span>
+    (click)="downloadPDF(this.config.src)" title="Download"></span>
 
-  <span class="my-icon" [inlineSVG]="'/assets/icon/baseline-rotate_left-24px.svg'" (click)="rotate(-90)"
-    title="Rotate Left"></span>
+  <span class="my-icon" [inlineSVG]="'/assets/icon/baseline-rotate_left-24px.svg'" data-customTooltip="Rotate left"
+    (click)="rotate(-90)" title="Rotate Left"></span>
   <span class="my-icon" [inlineSVG]="'/assets/icon/baseline-rotate_right-24px.svg'" (click)="rotate(90)"
-    title="Rotate Right"></span>
+    data-customTooltip="Rotate right" title="Rotate Right"></span>
   <span class="my-icon" [inlineSVG]="'/assets/icon/baseline-zoom_in-24px.svg'" (click)="incrementZoom(0.1)"
-    title="Zoom In"></span>
+    data-customTooltip="Zoom in" title="Zoom In"></span>
   <span class="my-icon" [inlineSVG]="'/assets/icon/baseline-zoom_out-24px.svg'" (click)="incrementZoom(-0.1)"
-    title="Zoom Out"></span>
+    data-customTooltip="Zoom out" title="Zoom Out"></span>
   <span class="my-icon" [ngClass]="{ active: config.fitToPage }"
     [inlineSVG]="'/assets/icon/baseline-insert_drive_file-24px.svg'" (click)="config.fitToPage = !config.fitToPage"
     title="Toggle Fit Page"></span>
@@ -38,10 +38,10 @@
     (keyup.enter)="searchQueryChanged(queryInp.value)" />
 </div>
 
-<div class="page-buttons d-flex black">
-  <button class="btn btn-dark page-increment" (click)="incrementZoom(0.1)"
+<div class="page-buttons">
+  <button class=" page-increment" (click)="incrementZoom(0.1)"
     [inlineSVG]="'/assets/icon/baseline-zoom_in-24px.svg'">+</button>
-  <button class="btn btn-dark page-increment" (click)="incrementZoom(-0.1)"
+  <button class=" page-increment" (click)="incrementZoom(-0.1)"
     [inlineSVG]="'/assets/icon/baseline-zoom_out-24px.svg'">-</button>
 </div>
 
