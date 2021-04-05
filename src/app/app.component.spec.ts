@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'syncfusion-angular-app'`, () => {
+  it(`should have as title 'swifty-pdfviewer'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('syncfusion-angular-app');
+    expect(app.title).toEqual('swifty-pdfviewer');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('syncfusion-angular-app app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('swifty-pdfviewer app is running!');
   });
 });

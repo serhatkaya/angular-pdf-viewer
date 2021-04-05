@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "syncfusion-angular-app": {
+    "swifty-pdfviewer": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/syncfusion-angular-app",
+            "outputPath": "dist/swifty-pdfviewer",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "syncfusion-angular-app:build"
+            "browserTarget": "swifty-pdfviewer:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "syncfusion-angular-app:build:production"
+              "browserTarget": "swifty-pdfviewer:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "syncfusion-angular-app:build"
+            "browserTarget": "swifty-pdfviewer:build"
           }
         },
         "test": {
@@ -114,16 +114,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "syncfusion-angular-app:serve"
+            "devServerTarget": "swifty-pdfviewer:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "syncfusion-angular-app:serve:production"
+              "devServerTarget": "swifty-pdfviewer:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "syncfusion-angular-app"
+  "defaultProject": "swifty-pdfviewer"
 }
